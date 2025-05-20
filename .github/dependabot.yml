@@ -1,6 +1,14 @@
 version: 2
 updates:
-  - package-ecosystem: "pip"
-    directory: "/"  # Root where requirements.txt is
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
       interval: "daily"
+    allow:
+      - dependency-type: "all"
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-type: "all"
